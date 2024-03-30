@@ -12,6 +12,7 @@ const contributors = [
   "camrandev",
   "mtbocim",
   "hbnnguyen",
+  "ggzzyy16",
 ];
 
 const linkedInLinks = [
@@ -21,6 +22,7 @@ const linkedInLinks = [
   'https://www.linkedin.com/in/camranrynowecer/',
   'https://www.linkedin.com/in/michaelbocim/',
   'https://www.linkedin.com/in/hbnnguyen/',
+  'https://www.linkedin.com/in/ggzzyy16/',
 ]
 
 export default function Devs() {
