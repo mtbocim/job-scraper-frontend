@@ -170,11 +170,12 @@ export default function JobTable({ descriptions }: JobTableProps) {
 
   function formatDate(date: Date) {
     const month = date.getMonth() + 1; // getMonth() is zero-based
-    const day = date.getDate();
+    let day = date.getDate();
     const year = date.getFullYear();
 
-    // Format the date as mm/dd/yyyy
-    return `${month}/${day}/${year}`;
+    // Format the date as mm/dd/yyyy'
+    console.log(day.toString().length === 2 ? "0" + day.toString() : day)
+    return `${month}/${day.toString().length === 1 ? "0" + day.toString() : day}/${year}`;
   }
 
   /**
@@ -231,6 +232,9 @@ export default function JobTable({ descriptions }: JobTableProps) {
         columns={columns}
         onRowClick={handleRowClick}
         initialState={{
+          sorting: {
+            sortModel: [{ field: 'job_scraped_date', sort: 'desc' }], 
+          },
           pagination: {
             paginationModel: {
               pageSize: 25,
